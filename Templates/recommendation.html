@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles.css')}}">
+</head>
+<body>
+    {%if recommendations%}
+        <h2>Your Learning Path Recommendations:</h2><br>
+        <h3>Recommended Career Path :</h3>
+        <div class="split">
+            <div class="career-path">
+                <ul>
+                    {%for c in career%}
+                        <li>{{c.career}} - {{c.confidence}}%</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="career-graph">
+                <img src="{{url_for('static', filename='career_graph.png')}}" alt="Career Graph"><br>
+            </div>
+        </div>
+        <h3>Courses:</h3>
+        <div class="courses">
+            <ul>
+            {%for rec in recommendations%}
+                <li>
+                    <strong>{{rec['Course Name']}}</strong> - {{rec['Difficulty Level']}}
+                    <a href="{{rec['Course URL']}}" target="_blank">Course Link</a>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% else %}
+        <h2>No recommendations available.</h2>
+    {% endif %}
+</body>
+</html>

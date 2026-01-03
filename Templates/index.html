@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Path Recommendation</title>
+    <link rel="stylesheet" type=text/css href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <h1>AI - Based Learning Path Recommendation</h1>
+    <form class="form" method="GET" action="/recommend">
+        <label for="interests">Enter your learning interests:</label><br>
+        <select id="interests" name="interests" size="1">
+            <option value="data science">Data Science</option>
+            <option value="web development">Web Development</option>
+            <option value="machine learning">Machine Learning</option>
+            <option value="cyber security">Cyber Security</option>
+            <option value="cloud computing">Cloud Computing</option>
+            <option value="artificial intelligence">Artificial Intelligence</option>
+            <option value="mobile app development">Mobile App Development</option>
+            <option value="digital marketing">Digital Marketing</option>
+            <option value="blockchain">Blockchain</option>
+            <option value="devops">DevOps</option>
+            <option value="ui/ux design">UI/UX Design</option>
+            <option value="game development">Game Development</option>
+            <option value="internet of things">Internet of Things</option>
+            <option value="software testing">Software Testing</option>
+            <option value="networking">Networking</option>
+            <option value="database management">Database Management</option>
+            <option value="robotics">Robotics</option>
+            <option value="edge computing">Edge Computing</option>
+            <option value="quantum computing">Quantum Computing</option>
+            <option value="nlp">Natural Language Processing (NLP)</option>
+            <option value="computer vision">Computer Vision</option>
+            <option value="big data">Big Data / Data Engineering</option>
+            <option value="ar vr">Augmented Reality / Virtual Reality</option>
+            <option value="ethical hacking">Ethical Hacking</option>
+            <option value="embedded systems">Embedded Systems</option>
+            <option value="ai healthcare">AI for Healthcare</option>
+            <option value="fintech ai">AI for Finance / FinTech</option>
+            <option value="saas development">SaaS Development</option>
+            <option value="entrepreneurship">Entrepreneurship / Startup Management</option>
+        </select><br><br>
+        <label for="skills">Enter your existing skills (comma separated):</label><br>
+        <input type="text" id="skills" name="skills" placeholder="e.g.,Python,HTML,Data Analysis"><br><br>
+        <label for="level">Select your proficiency level:</label><br>
+        <select id="level" name="level">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select><br><br>
+        <label for="count">How many recommendations do you want?</label><br>
+        <input type="number" id="count" name="count" min="1" max="20" value="10"><br><br>
+        <button>Get Recommendations</button>
+    </form>
+</body>
+</html>
