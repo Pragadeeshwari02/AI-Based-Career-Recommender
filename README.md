@@ -58,16 +58,6 @@ Develop a web interface or mobile app for better user interaction.
 
 Add user profiles and history for personalized tracking.
 
-📁 Project Structure
-AI-Based-Career-Recommender/
-│
-├─ Notebooks/                 # Jupyter notebooks with ML implementation
-├─ data/                      # Dataset for career paths and skills
-├─ scripts/                   # Python scripts for predictions
-├─ requirements.txt           # Dependencies
-├─ README.md                  # Project documentation
-└─ LICENSE
-
 👩‍💻 Author
 
 Pragadeeshwari
