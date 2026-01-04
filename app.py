@@ -1,4 +1,5 @@
 from flask import Flask,request,url_for,render_template
+import os
 
 app=Flask(__name__)
 
@@ -73,4 +74,5 @@ def plot_graph(career):
     plt.close()
 
 if __name__=="__main__":
-    app.run(debug=True)
+    port=int(os.environ.get("PORT",5000))
+    app.run(host="0.0.0.0",port=port)
