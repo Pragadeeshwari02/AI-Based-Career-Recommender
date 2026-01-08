@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Path Recommendation</title>
-    <link rel="stylesheet" type=text/css href="{{url_for('static',filename='style.css')}}">
+    <link rel="stylesheet" type=text/css href="{{url_for('static',filename='index.css')}}">
 </head>
 <body>
-    <h1>AI - Based Learning Path Recommendation</h1>
+    <h1>AI-Based Career Path and Course Recommendation System</h1>
     <form class="form" method="GET" action="/recommend">
         <label for="interests">Enter your learning interests:</label><br>
         <select id="interests" name="interests" size="1">
@@ -49,7 +49,7 @@
             <option value="intermediate">Intermediate</option>
             <option value="advanced">Advanced</option>
         </select><br><br>
-        <label for="count">How many recommendations do you want?</label><br>
+        <label for="count">How many course recommendations do you want?</label><br>
         <input type="number" id="count" name="count" min="1" max="20" value="10"><br><br>
         <button>Get Recommendations</button>
     </form>
