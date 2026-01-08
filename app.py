@@ -84,7 +84,7 @@ matplotlib.use('Agg')
 #Function for Graph 
 def graph(career):
     career_df=pd.DataFrame(career)
-    career_df.plot(kind='bar', x='career', y='confidence', legend=False,color='darkred')
+    career_df.plot(kind='bar',x='career',y='confidence',legend=False,color='darkred')
     plt.title('Top Career Paths')
     plt.xlabel('Career Path')
     plt.ylabel('Confidence (%)')
