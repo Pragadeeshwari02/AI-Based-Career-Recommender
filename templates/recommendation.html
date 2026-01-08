@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recommendations</title>
-    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='recommendation.css')}}">
 </head>
 <body>
     {%if recommendations%}
@@ -22,7 +22,7 @@
                 <img src="{{url_for('static', filename='career_graph.png')}}" alt="Career Graph"><br>
             </div>
         </div>
-        <h3>Courses:</h3>
+        <h3>Courses :</h3>
         <div class="courses">
             <ul>
             {%for rec in recommendations%}
